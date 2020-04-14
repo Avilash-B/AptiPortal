@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/StyleSheet.css" type="text/css" media="all" runat="server"/>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src="js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="css/StyleSheet.css" type="text/css" media="all" runat="server"/>
+    <title></title>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+<!--Header -->
+     <div class="row1">
+         <header id="header" class="clear">
+            <div id="hgroup">
+                <h1><a href="home.aspx">Aptitude Preparation Portal</a></h1>
+                    <p class="fl_left" >Some Tag Line </p>
+                    <p class="fl_right"><asp:LinkButton ID="loginstatus" runat="server" Text="Login"  ><asp:Label ID="username" runat="server"></asp:Label></asp:LinkButton></p>
+                                        
+             </div>
+        </header>
+      </div>
+
+<!--Header -->
+<!-- Nav Bar -->
+        <div class="row2">
+            <nav id="topnav">
+                <ul class="clear">
+                    <li class="activefirst">
+                        <a href="home.aspx">Home</a>
+                                               
+                    </li>
+                   
+                    <li><a href="aptitude.aspx">Aptitude</a></li>
+
+                <li><a class="drop" href="#">Test</a>
+                <ul>
+                    <li><a href="selectptest.aspx">Practice Test</a></li>
+                    <li><a href="instruction.aspx">Online Test</a></li>
+                </ul>
+                </li>
+
+                     <li><a class="drop" href="#">Account</a>
+                <ul>
+                    <li><a href="profile.aspx">Profile</a></li>
+                    <li><a href="history.aspx">Result History</a></li>
+                    <li><a href="analysis.aspx">Analysis</a></li>
+                </ul>
+                </li>
+                    <li><a href="about.aspx">About Us</a></li>
+                    
+                </ul>
+             </nav>
+            </div>
+<!-- Nav Bar -->
+
+<!--Main Body-->
+            <div class="main" >
+                <asp:ContentPlaceHolder ID="signup" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="login" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="recovery" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="home" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="ptest" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="otest" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="profile" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="history" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="analysis" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="about" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="feedback" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="aptitude" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="instruction" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="editprofile" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="selectptest" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="quants" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="logical" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="verbal" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="nonverbal" runat="server"></asp:ContentPlaceHolder>
+                
+            </div>
+<!--Main Body-->
+
+<!--Footer-->
+<div class="row4">
+  <footer id="footer" class="clear">
+    <p class="fl_left" >Copyright &copy;  <a href="#">Domain Name</a></p>
+    <p class="fl_right"><a href="feedback.aspx" title="Give us Feedback">Feedback&nbsp;&nbsp;&nbsp;</a></p>
+  </footer>
+</div>
+<!--Footer-->
+    </form>
+</body>
+</html>
